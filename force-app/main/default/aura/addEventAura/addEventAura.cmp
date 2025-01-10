@@ -1,0 +1,6 @@
+<aura:component
+  implements="lightning:actionOverride,forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  
+</aura:component>

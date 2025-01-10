@@ -1,0 +1,20 @@
+<apex:page controller="getset" >
+
+    <apex:form >
+     <apex:pageBlock title="Calculator">
+         <apex:pageBlockSection title="Greater Number Calculator" columns="1">
+             <apex:inputText label="Enter First Number" value="{!num1}"/>
+             <apex:inputText label="Enter Second Number" value="{!num2}"/> 
+             <apex:inputText label="Enter Third Number" value="{!num3}"/> 
+             
+             <apex:selectRadio label="Select Your Choice" value="{!Choice}">
+                 <apex:selectOption itemLabel="Greater" itemValue="G"/>
+                 <apex:selectOption itemLabel="Smaller" itemValue="S"/>
+             </apex:selectRadio>
+             
+                 <apex:commandButton value="Click here to calculate" action="{!mainMethod}"/>
+                     <apex:outputText label=" the result is " value="{!result}"/> 
+         </apex:pageBlockSection>
+        </apex:pageBlock>   
+    </apex:form>            
+</apex:page>
