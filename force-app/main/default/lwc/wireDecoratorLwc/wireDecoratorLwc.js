@@ -16,7 +16,7 @@ studentDetail({data, error}){
         this.data = data;
     }
     else if(error){
-        console.log('error occured');
+        console.log('this is error');
     }
 }
 }
