@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="pokemons" icon-name="utility:animal_and_nature">
+        
+        <template if:true={pokemons}>
+            <lightning-layout multiple-rows="true">
+                <template for:each={pokemons} for:item="pokemonsDetails">
+                    <lightning-layout-item key={pokemonsDetails.Id} size="3" class="slds-var-p-around_x-small">
+                      
+                        <!--Pokemon Card Starts Here-->
+                        <lightning-card title={pokemonsDetails.Name} class="pokemons_card">
+
+                            <div class="slds-var-p-horizontal_small">
+                              <div class="slds-grid slds-wrap">
+
+                                <div class="slds-col slds-size_8-of-12">
+                                     <img src={pokemonsDetails.image__c} alt="pokemon" class="pokemon_images"/>
+                                </div>
+                                <div class="slds-col slds-size_4-of-12">
+                                    <p class="slds-var-m-buttom_xx-small">{pokemonsDetails.Height__c}</p>
+                                    <p class="slds-var-m-buttom_xx-small">{pokemonsDetails.Weight__c}</p>
+                                    <p class="slds-var-m-buttom_xx-small"><strong>{pokemonsDetails.Trainer__r.FirstName}</strong></p>
+
+                                </div>
+                              </div>    
+                            </div>
+                        </lightning-card>
+                        <!--Pokemon Card End Here-->
+                    </lightning-layout-item>
+                </template>
+            </lightning-layout>
+
+        </template>
+        <template if:true={error}>
+            Error Occured
+        </template>
+    </lightning-card>
+</template>

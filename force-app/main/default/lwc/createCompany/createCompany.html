@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Comapny Detail">
+        <lightning-layout multiple-rows="true" class="slds-var-p-horizontal_small">
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input name="first name" label="First Name" type="text" onchange={handlechange}></lightning-input>
+                <lightning-input name="last name" label="Last Name" type="text" onchange={handlechange}></lightning-input>
+            </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                <lightning-input name="email" label="Email" type="email" onchange={handlechange}></lightning-input>
+                <lightning-input name="phone" label="Phone" type="phone" onchange={handlechange}></lightning-input>
+            </lightning-layout-item> 
+        </lightning-layout>
+        <div align="Center">
+        <lightning-button variant="brand" label="Save" title="save" onclick={handleSave} class="slds-var-p-horizontal_small"></lightning-button>
+        <lightning-button label="Cancel" title="cancel" onclick={handleCancel}></lightning-button>
+    </div>
+    </lightning-card>
+    
+</template>

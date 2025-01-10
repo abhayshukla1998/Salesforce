@@ -1,0 +1,16 @@
+<apex:page controller="accountCreationWithVfPage">
+    <apex:form >
+        {!msg}
+        <apex:pageBlock >
+            <apex:pageBlockSection title="New Account" columns="1">
+                <apex:inputText label="Enter Account Name" value="{!nam}"/>
+                <apex:inputText label="Enter Account phone" value="{!phone}"/>
+                <apex:inputText label="Enter Account fax" value="{!fax}"/>
+                <apex:inputText label="Enter Account Industry" value="{!Industry}"/>
+                <apex:inputText label="Enter Account Rating" value="{!Rating}"/>
+                
+                <apex:commandButton value="save" action="{!createAccount}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
